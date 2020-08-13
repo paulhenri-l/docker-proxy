@@ -14,7 +14,7 @@ Clone the repo
 Create the proxy network.
 
 ```
-docker network create **docker-proxy
+docker network create docker-proxy
 ```
 
 Start the proxy.

@@ -14,7 +14,7 @@ services:
       - proxy
 
   mysql:
-    image: "mysql:8"
+    image: "mariadb:10.6"
     ports:
       - 3306:3306
     volumes:

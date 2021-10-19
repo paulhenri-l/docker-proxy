@@ -26,6 +26,16 @@ services:
     networks:
       - proxy
 
+  dynamodb:
+    command: "-jar DynamoDBLocal.jar -sharedDb -optimizeDbBeforeStartup -dbPath ./data"
+    image: "amazon/dynamodb-local:latest"
+    container_name: dynamodb-local
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./data/dynamodb:/home/dynamodblocal/data"
+    working_dir: /home/dynamodblocal
+
   redis:
     image: "redis:6-alpine"
     ports:
